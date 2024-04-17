@@ -1,0 +1,84 @@
+{
+    "quiz": [
+        {
+            "question": "What is a closure in JavaScript?",
+            "a": "A way to bind a function with its surrounding state.",
+            "b": "A built-in JavaScript feature for closing programs.",
+            "c": "A method for closing browser tabs in JavaScript applications.",
+            "d": "A type of JavaScript error related to memory leaks.",
+            "answer": "a"
+        },
+        {
+            "question": "Which of the following is not a primitive data type in JavaScript?",
+            "a": "String",
+            "b": "Boolean",
+            "c": "Array",
+            "d": "Number",
+            "answer": "c"
+        },
+        {
+            "question": "What does DOM stand for?",
+            "a": "Document Object Model",
+            "b": "Data Object Model",
+            "c": "Digital Output Module",
+            "d": "Direct Object Manipulation",
+            "answer": "a"
+        },
+        {
+            "question": "What is the purpose of the 'use strict' directive in JavaScript?",
+            "a": "To enable strict mode, which catches common coding mistakes and 'unsafe' actions.",
+            "b": "To use stricter syntax rules for defining functions.",
+            "c": "To restrict the use of certain JavaScript keywords.",
+            "d": "To enforce strict type checking in JavaScript.",
+            "answer": "a"
+        },
+        {
+            "question": "Which of the following is NOT a way to declare a variable in JavaScript?",
+            "a": "let",
+            "b": "var",
+            "c": "const",
+            "d": "string",
+            "answer": "d"
+        },
+        {
+            "question": "What does the 'this' keyword refer to in JavaScript?",
+            "a": "The current function being executed.",
+            "b": "The parent object of the current object.",
+            "c": "The value of the variable passed to the function.",
+            "d": "The current execution context.",
+            "answer": "d"
+        },
+        {
+            "question": "What does the 'typeof' operator return?",
+            "a": "The data type of a variable.",
+            "b": "The value of a variable.",
+            "c": "The length of a string.",
+            "d": "The position of an element in an array.",
+            "answer": "a"
+        },
+        {
+            "question": "What is a callback function in JavaScript?",
+            "a": "A function passed as an argument to another function to be executed later.",
+            "b": "A function that calls another function.",
+            "c": "A function that is called when an error occurs.",
+            "d": "A function that is executed immediately after it is defined.",
+            "answer": "a"
+        },
+        {
+            "question": "What does AJAX stand for?",
+            "a": "Asynchronous JavaScript and XML",
+            "b": "Asynchronous JavaScript and XHTML",
+            "c": "Advanced JavaScript and XML",
+            "d": "Advanced JavaScript and XHTML",
+            "answer": "a"
+        },
+        {
+            "question": "What does JSON stand for?",
+            "a": "JavaScript Object Notation",
+            "b": "JavaScript Object Naming",
+            "c": "JavaScript Operator Notation",
+            "d": "JavaScript Object Navigator",
+            "answer": "a"
+        }
+    ]
+}
