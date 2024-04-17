@@ -1,84 +1,84 @@
 {
     "quiz": [
         {
-            "question": "What is a closure in JavaScript?",
-            "a": "A way to bind a function with its surrounding state.",
-            "b": "A built-in JavaScript feature for closing programs.",
-            "c": "A method for closing browser tabs in JavaScript applications.",
-            "d": "A type of JavaScript error related to memory leaks.",
+            "question": "What is the purpose of the 'require' function in Node.js?",
+            "a": "To include external modules into your Node.js application.",
+            "b": "To define a new function in Node.js.",
+            "c": "To create a new instance of a class in Node.js.",
+            "d": "To declare a variable in Node.js.",
             "answer": "a"
         },
         {
-            "question": "Which of the following is not a primitive data type in JavaScript?",
-            "a": "String",
-            "b": "Boolean",
-            "c": "Array",
-            "d": "Number",
-            "answer": "c"
+            "question": "What is the Node.js event loop?",
+            "a": "A mechanism that allows Node.js to perform non-blocking I/O operations.",
+            "b": "A loop that runs continuously, processing asynchronous tasks in Node.js.",
+            "c": "A function that handles errors in Node.js applications.",
+            "d": "A data structure used to store events in Node.js.",
+            "answer": "b"
         },
         {
-            "question": "What does DOM stand for?",
-            "a": "Document Object Model",
-            "b": "Data Object Model",
-            "c": "Digital Output Module",
-            "d": "Direct Object Manipulation",
-            "answer": "a"
-        },
-        {
-            "question": "What is the purpose of the 'use strict' directive in JavaScript?",
-            "a": "To enable strict mode, which catches common coding mistakes and 'unsafe' actions.",
-            "b": "To use stricter syntax rules for defining functions.",
-            "c": "To restrict the use of certain JavaScript keywords.",
-            "d": "To enforce strict type checking in JavaScript.",
-            "answer": "a"
-        },
-        {
-            "question": "Which of the following is NOT a way to declare a variable in JavaScript?",
-            "a": "let",
-            "b": "var",
-            "c": "const",
-            "d": "string",
-            "answer": "d"
-        },
-        {
-            "question": "What does the 'this' keyword refer to in JavaScript?",
-            "a": "The current function being executed.",
-            "b": "The parent object of the current object.",
-            "c": "The value of the variable passed to the function.",
-            "d": "The current execution context.",
-            "answer": "d"
-        },
-        {
-            "question": "What does the 'typeof' operator return?",
-            "a": "The data type of a variable.",
-            "b": "The value of a variable.",
-            "c": "The length of a string.",
-            "d": "The position of an element in an array.",
-            "answer": "a"
-        },
-        {
-            "question": "What is a callback function in JavaScript?",
+            "question": "What is a callback function in Node.js?",
             "a": "A function passed as an argument to another function to be executed later.",
             "b": "A function that calls another function.",
-            "c": "A function that is called when an error occurs.",
+            "c": "A function that is executed when an error occurs.",
             "d": "A function that is executed immediately after it is defined.",
             "answer": "a"
         },
         {
-            "question": "What does AJAX stand for?",
-            "a": "Asynchronous JavaScript and XML",
-            "b": "Asynchronous JavaScript and XHTML",
-            "c": "Advanced JavaScript and XML",
-            "d": "Advanced JavaScript and XHTML",
+            "question": "What is the purpose of the 'exports' object in Node.js?",
+            "a": "To export functions, objects, or primitive values from a module in Node.js.",
+            "b": "To handle HTTP requests in Node.js applications.",
+            "c": "To manage external dependencies in Node.js projects.",
+            "d": "To define middleware functions in Express.js applications.",
             "answer": "a"
         },
         {
-            "question": "What does JSON stand for?",
-            "a": "JavaScript Object Notation",
-            "b": "JavaScript Object Naming",
-            "c": "JavaScript Operator Notation",
-            "d": "JavaScript Object Navigator",
+            "question": "What is the role of the 'module.exports' object in Node.js?",
+            "a": "To specify the main entry point of a Node.js application.",
+            "b": "To define the structure of a module in Node.js.",
+            "c": "To export functions, objects, or primitive values from a module in Node.js.",
+            "d": "To import external modules into a Node.js application.",
+            "answer": "c"
+        },
+        {
+            "question": "What is the purpose of the 'EventEmitter' class in Node.js?",
+            "a": "To emit events asynchronously in Node.js applications.",
+            "b": "To handle HTTP requests in Node.js applications.",
+            "c": "To create a new instance of a class in Node.js.",
+            "d": "To define middleware functions in Express.js applications.",
             "answer": "a"
+        },
+        {
+            "question": "What is the difference between 'setTimeout' and 'setImmediate' in Node.js?",
+            "a": "'setTimeout' schedules a callback function to be invoked after a specified delay, while 'setImmediate' schedules a callback function to be invoked immediately after the current operation completes.",
+            "b": "'setTimeout' schedules a callback function to be invoked immediately, while 'setImmediate' schedules a callback function to be invoked after a specified delay.",
+            "c": "'setTimeout' is used to delay the execution of a function, while 'setImmediate' is used to execute a function asynchronously.",
+            "d": "'setTimeout' and 'setImmediate' are identical and can be used interchangeably.",
+            "answer": "a"
+        },
+        {
+            "question": "What is the role of the 'process' object in Node.js?",
+            "a": "To handle HTTP requests in Node.js applications.",
+            "b": "To manage external dependencies in Node.js projects.",
+            "c": "To provide information about the current Node.js process and control its behavior.",
+            "d": "To define middleware functions in Express.js applications.",
+            "answer": "c"
+        },
+        {
+            "question": "What is the purpose of the 'fs' module in Node.js?",
+            "a": "To handle HTTP requests in Node.js applications.",
+            "b": "To manage external dependencies in Node.js projects.",
+            "c": "To provide an interface for interacting with the file system in Node.js.",
+            "d": "To define middleware functions in Express.js applications.",
+            "answer": "c"
+        },
+        {
+            "question": "What is the purpose of the 'path' module in Node.js?",
+            "a": "To handle HTTP requests in Node.js applications.",
+            "b": "To manage external dependencies in Node.js projects.",
+            "c": "To provide utilities for working with file and directory paths in Node.js.",
+            "d": "To define middleware functions in Express.js applications.",
+            "answer": "c"
         }
     ]
 }
