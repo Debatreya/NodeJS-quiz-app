@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node.js Quiz Application</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Node.js Quiz Application</h1>
-    <script src="index.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Node.js Quiz Application</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Node.js Quiz Application</h1>
+
+		<!-- User Details (name, email, phone) -->
+		<section class="user-info" id="user-info">
+			<h2>User Details</h2>
+			<div id="user-form">
+				<div>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" value="" required />
+				</div>
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" value="" required />
+				</div>
+				<div>
+					<label for="phone">Phone:</label>
+					<input type="tel" id="phone" name="phone" value="" required />
+				</div>
+				<button onclick="">Start Quiz</button>
+			</div>
+		</section>
+
+		<!-- Quiz Section -->
+		<section class="quiz hidden" id="quiz">
+			<aside>
+				<!-- For navigating the questions -->
+				<h2>Questions</h2>
+				<ul id="questions">
+					<li onclick="">Question 1</li>
+					<li onclick="">Question 2</li>
+					<li onclick="">Question 3</li>
+					<li onclick="">Question 4</li>
+					<li onclick="">Question 5</li>
+					<li onclick="">Question 6</li>
+					<li onclick="">Question 7</li>
+					<li onclick="">Question 8</li>
+					<li onclick="">Question 9</li>
+					<li onclick="">Question 10</li>
+				</ul>
+			</aside>
+			<div class="questions">
+				<div id="q1">
+					<h3>Question 1</h3>
+					<div class="question">
+						<p>What is NodeJs?</p>
+						<div class="options">
+							<label>
+								<input type="radio" name="q1" value="a" />
+								A. A JavaScript runtime built on Chrome's V8 JavaScript engine
+							</label>
+							<label>
+								<input type="radio" name="q1" value="b" />
+								B. A JavaScript library
+							</label>
+							<label>
+								<input type="radio" name="q1" value="c" />
+								C. A JavaScript framework
+							</label>
+							<label>
+								<input type="radio" name="q1" value="d" />
+								D. A JavaScript package
+							</label>
+						</div>
+					</div>
+				</div>
+				<div id="q2">
+					<h3>Question 1</h3>
+					<div class="question">
+						<p>What is NodeJs?</p>
+						<div class="options">
+							<label>
+								<input type="radio" name="q2" value="a" />
+								A. A JavaScript runtime built on Chrome's V8 JavaScript engine
+							</label>
+							<label>
+								<input type="radio" name="q2" value="b" />
+								B. A JavaScript library
+							</label>
+							<label>
+								<input type="radio" name="q2" value="c" />
+								C. A JavaScript framework
+							</label>
+							<label>
+								<input type="radio" name="q2" value="d" />
+								D. A JavaScript package
+							</label>
+						</div>
+					</div>
+				</div>
+				<div id="q3">
+                    <h3>Question 1</h3>
+					<div class="question">
+						<p>What is NodeJs?</p>
+						<div class="options">
+							<label>
+								<input type="radio" name="q3" value="a" />
+								A. A JavaScript runtime built on Chrome's V8 JavaScript engine
+							</label>
+							<label>
+								<input type="radio" name="q3" value="b" />
+								B. A JavaScript library
+							</label>
+							<label>
+								<input type="radio" name="q3" value="c" />
+								C. A JavaScript framework
+							</label>
+							<label>
+								<input type="radio" name="q3" value="d" />
+								D. A JavaScript package
+							</label>
+						</div>
+					</div>
+                </div>
+			</div>
+		</section>
+        
+		<section class="results hidden"></section>
+
+		<script src="index.js"></script>
+	</body>
 </html>
