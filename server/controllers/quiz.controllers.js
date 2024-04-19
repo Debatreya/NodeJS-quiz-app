@@ -12,7 +12,6 @@ const getQuiz = async (req, res) => {
 
 const checkSolution = async (req, res) => {
 	const { name, email, phone, answers } = req.body;
-	console.log(name, email, phone, answers);
 	const quiz = quizObj.quiz;
 	try {
 		const correctAnswers = [],

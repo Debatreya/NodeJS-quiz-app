@@ -73,7 +73,6 @@ const submitQuiz = async () => {
     // Make API call to submit the quiz (POST at /api/quiz)
     // This API will give us the result JSON
     const url = '/api/quiz';
-    console.log(user);
     const data = {
         name: user.name,
         email: user.email,
@@ -89,12 +88,13 @@ const submitQuiz = async () => {
     });
 
     const result = await response.json();
-    console.log(result);
     // Show the result
     const resultSection = document.querySelector("#results")
-    resultSection.innerHTML = generateResult(result)
+    const resultHTML = generateResult(result)
+    resultSection.innerHTML = resultHTML;
     toast("Results Generated", "success")
     resultSection.classList.remove('hidden')
+    resultSection.scrollIntoView({behavior: 'smooth'})
 }
 
 // Function to start toaster
@@ -170,7 +170,7 @@ const generateQuestionHTML = (ques, idx) => {
 }
 
 // Function to generate HTML for result
-const generateResult = async (res) => {
+const generateResult = (res) => {
     const user = res.user;
     const score = res.score;
     const quizResult = res.quizResult;
@@ -207,7 +207,7 @@ const generateResult = async (res) => {
                 <h2>Correct Answers</h2>
                 <ul id="correct_answers">
                     ${correctAnswers.map((ans, idx) => {
-                        return `<li class="colorGreen" onclick("next(ans)")>Question ${ans+1}</li>`
+                        return `<li class="colorGreen" onclick="next(${ans})">Question ${ans+1}</li>`
                     })}
                 </ul>
             </div>
@@ -215,7 +215,7 @@ const generateResult = async (res) => {
                 <h2>Wrong Answers</h2>
                 <ul id="wrong_answers">
                     ${wrongAnswers.map((ans, idx) => {
-                        return `<li class="colorRed" onclick("next(ans)")>Question ${ans+1}</li>`
+                        return `<li class="colorRed" onclick="next(${ans})">Question ${ans+1}</li>`
                     })}
                 </ul>
             </div>
@@ -223,7 +223,7 @@ const generateResult = async (res) => {
                 <h2>Unattempted Answers</h2>
                 <ul id="unattempted_answers">
                     ${unAttempted.map((ans, idx) => {
-                        return `<li class="colorYellow" onclick("next(ans")>Question ${ans+1}</li>`
+                        return `<li class="colorYellow" onclick="next(${ans})">Question ${ans+1}</li>`
                     })}
                 </ul>
             </div>
