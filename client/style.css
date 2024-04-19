@@ -9,6 +9,8 @@ body{
     background-color: aliceblue;
     height: 100svh;
     overflow: hidden;
+    width: 100svw;
+    position: relative;
 }
 
 .hidden{
@@ -375,4 +377,33 @@ section#results{
     cursor: pointer;
     color: white;
     font-weight: 600;
+}
+
+
+/* CUSTOM TOASTER */
+.toaster{
+    position: absolute;
+    top: 10px;
+    z-index: 9999;
+    width: 100%;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.toaster>.toast{
+    padding: 1rem;
+    color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease-in-out;
+    width: max-content;
+    margin: auto;
 }

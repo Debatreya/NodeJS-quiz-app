@@ -10,7 +10,7 @@
 		<h1>Node.js Quiz Application</h1>
 		<div class="area">
 			<!-- User Details (name, email, phone) -->
-			<section id="user-info" class="hidden">
+			<section id="user-info" class="">
 				<div class="user-info">
 					<h2>User Details</h2>
 					<div id="user-form">
@@ -26,7 +26,7 @@
 							<label for="phone">Phone:</label>
 							<input type="tel" id="phone" name="phone" value="" required />
 						</div>
-						<button onclick="">Start Quiz</button>
+						<button onclick="startQuiz()">Start Quiz</button>
 					</div>
 				</div>
 			</section>
@@ -37,103 +37,48 @@
 					<!-- For navigating the questions -->
 					<h2>Questions</h2>
 					<ul id="questions">
-						<li onclick="">Question 1</li>
-						<li onclick="">Question 2</li>
-						<li onclick="">Question 3</li>
-						<li onclick="">Question 4</li>
-						<li onclick="">Question 5</li>
-						<li onclick="">Question 6</li>
-						<li onclick="">Question 7</li>
-						<li onclick="">Question 8</li>
-						<li onclick="">Question 9</li>
-						<li onclick="">Question 10</li>
+						<li onclick="next(0)">Question 1</li>
+						<li onclick="next(1)">Question 2</li>
+						<li onclick="next(2)">Question 3</li>
+						<li onclick="next(3)">Question 4</li>
+						<li onclick="next(4)">Question 5</li>
+						<li onclick="next(5)">Question 6</li>
+						<li onclick="next(6)">Question 7</li>
+						<li onclick="next(7)">Question 8</li>
+						<li onclick="next(8)">Question 9</li>
+						<li onclick="next(9)">Question 10</li>
 					</ul>
 					<div class="btns">
-						<button onclick="" class="colorGreen">Submit</button>
+						<button onclick="submitQuiz()" class="colorGreen">Submit</button>
 					</div>
 				</aside>
 				<div class="questions">
-					<div id="q1">
-						<h3>Question 1</h3>
-						<div class="ques">
-							<p>What is NodeJs?</p>
-							<div class="options">
-								<label>
-									<input type="radio" name="q1" value="a" />
-									A. A JavaScript runtime built on Chrome's V8 JavaScript engine
-								</label>
-								<label>
-									<input type="radio" name="q1" value="b" />
-									B. A JavaScript library
-								</label>
-								<label>
-									<input type="radio" name="q1" value="c" />
-									C. A JavaScript framework
-								</label>
-								<label>
-									<input type="radio" name="q1" value="d" />
-									D. A JavaScript package
-								</label>
-							</div>
-							<div class="btns">
-								<button onclick="" class="colorGreen">Clear</button>
-								<button onclick="" class="colorBlue">Save and Next</button>
-							</div>
-						</div>
-					</div>
-					<div id="q2">
-						<h3>Question 2</h3>
-						<div class="ques">
-							<p>What is NodeJs?</p>
-							<div class="options">
-								<label>
-									<input type="radio" name="q2" value="a" />
-									A. A JavaScript runtime built on Chrome's V8 JavaScript engine
-								</label>
-								<label>
-									<input type="radio" name="q2" value="b" />
-									B. A JavaScript library
-								</label>
-								<label>
-									<input type="radio" name="q2" value="c" />
-									C. A JavaScript framework
-								</label>
-								<label>
-									<input type="radio" name="q2" value="d" />
-									D. A JavaScript package
-								</label>
-							</div>
-							<div class="btns">
-								<button onclick="" class="colorGreen">Clear</button>
-								<button onclick="" class="colorBlue">Save and Next</button>
-							</div>
-						</div>
-					</div>
+					<!-- API Connected It will be set by JS -->
 				</div>
 			</section>
 
-			<section id="results">
+			<section id="results" class="hidden">
 				<!-- Show User details who took the Test -->
 				<div class="res_user">
 					<h2>User Details</h2>
 					<div class="detail">
 						<div>
 							<label for="name">Name:</label>
-							<span id="res_name">Debatreya Das</span>
+							<span id="res_name"></span>
 						</div>
 						<div>
 							<label for="email">Email:</label>
-							<span id="res_email"> 12212070@nitkkr.ac.in</span>
+							<span id="res_email"></span>
 						</div>
 						<div>
 							<label for="phone">Phone:</label>
-							<span id="res_phone">6294393320</span>
+							<span id="res_phone"></span>
 						</div>
 					</div>
 				</div>
 				<!-- Show the Over all score in a circle -->
 				<div class="res_score colorGreen">
-					<div id="score">7</div>
+					<div id="score"></div>
 				</div>
 				<!-- Show the correct and wrong answers (question numbers only clickable)-->
 				<div class="user_answers">
@@ -160,6 +105,13 @@
 					</div>
 				</div>
 			</section>
+		</div>
+
+		<!-- CUSTOM TOASTER -->
+		<div class="toaster hidden" id="toaster">
+			<div class="toast">
+				<!-- MESSAGE -->
+			</div>
 		</div>
 
 		<script src="index.js"></script>

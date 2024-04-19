@@ -4,7 +4,7 @@ import resultGenerator from "../helper/resultGenerator.js";
 
 const getQuiz = async (req, res) => {
 	try {
-		res.status(200).json(quizObj);
+		res.status(200).json(quizObj?.quiz);
 	} catch (error) {
 		res.status(404).json({ message: error.message });
 	}
@@ -12,6 +12,7 @@ const getQuiz = async (req, res) => {
 
 const checkSolution = async (req, res) => {
 	const { name, email, phone, answers } = req.body;
+	console.log(name, email, phone, answers);
 	const quiz = quizObj.quiz;
 	try {
 		const correctAnswers = [],
@@ -35,12 +36,6 @@ const checkSolution = async (req, res) => {
 		const wrong = wrongAnswers.length;
 		const unAttemptedCount = unAttempted.length;
 		const score = correct * 10;
-		const quizResult = resultGenerator(
-			correctAnswers,
-			wrongAnswers,
-			unAttempted,
-			totalQuestions
-		);
 
 		const result = {
 			user: { name, email, phone },
@@ -49,7 +44,11 @@ const checkSolution = async (req, res) => {
 			wrong,
 			unAttemptedCount,
 			score,
-			quizResult,
+			quizResult : {
+				correctAnswers,
+				wrongAnswers,
+				unAttempted,
+			},
 		};
 
 		res.status(200).json(result);
