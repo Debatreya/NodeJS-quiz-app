@@ -89,10 +89,12 @@ const submitQuiz = async () => {
 
     const result = await response.json();
     // Show the result
+    const userInfo = document.querySelector('#user-info');
     const resultSection = document.querySelector("#results")
     const resultHTML = generateResult(result)
     resultSection.innerHTML = resultHTML;
     toast("Results Generated", "success")
+    userInfo.classList.remove('hidden')
     resultSection.classList.remove('hidden')
     resultSection.scrollIntoView({behavior: 'smooth'})
 }
@@ -258,3 +260,25 @@ const colorChooser = (score) => {
         return 'colorRed'
     }
 }
+
+// Toggle HamBurger Menu
+const toggleMenu = () => {
+    const menu = document.querySelector('aside');
+    menu.classList.toggle('hidden');
+    console.log('Menu Toggled');
+    if(!menu.classList.contains('hidden')){
+        document.querySelector('.ham').innerHTML = '&#x274C';
+    }
+    else{
+        document.querySelector('.ham').innerHTML = '&#9776;';
+    }
+}
+
+// Event Listeners
+// On screen resize
+window.addEventListener('resize', () => {
+    const menu = document.querySelector('aside');
+    if(window.innerWidth > 720){
+        menu.classList.remove('hidden');
+    }
+})

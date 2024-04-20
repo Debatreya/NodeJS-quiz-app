@@ -10,7 +10,7 @@
 		<h1>Node.js Quiz Application</h1>
 		<div class="area">
 			<!-- User Details (name, email, phone) -->
-			<section id="user-info" class="">
+			<section id="user-info" class="user">
 				<div class="user-info">
 					<h2>User Details</h2>
 					<div id="user-form">
@@ -33,6 +33,11 @@
 
 			<!-- Quiz Section -->
 			<section class="quiz hidden" id="quiz">
+				<!-- Hamburger -->
+				<div class="ham" onclick="toggleMenu()">
+					<!-- HTML entity for hamburger -->
+					&#9776;
+				</div>
 				<aside>
 					<!-- For navigating the questions -->
 					<h2>Questions</h2>
@@ -48,6 +53,17 @@
 						<li onclick="next(8)">Question 9</li>
 						<li onclick="next(9)">Question 10</li>
 					</ul>
+					<!-- Full Marks and Marking scheme
+					<div class="marks">
+						<div>
+							<label for="fullMarks">Full Marks:</label>
+							<span id="fullMarks">10</span>
+						</div>
+						<div>
+							<label for="marking">Marking Scheme:</label>
+							<span id="marking">+1 for correct, 0 for wrong, 0 for unattempted</span>
+						</div>
+					</div> -->
 					<div class="btns">
 						<button onclick="submitQuiz()" class="colorGreen">Submit</button>
 					</div>
@@ -64,21 +80,21 @@
 					<div class="detail">
 						<div>
 							<label for="name">Name:</label>
-							<span id="res_name"></span>
+							<span id="res_name">jkfbsdbfie</span>
 						</div>
 						<div>
 							<label for="email">Email:</label>
-							<span id="res_email"></span>
+							<span id="res_email">fjdsbfkjb</span>
 						</div>
 						<div>
 							<label for="phone">Phone:</label>
-							<span id="res_phone"></span>
+							<span id="res_phone">sdbjksbdk</span>
 						</div>
 					</div>
 				</div>
 				<!-- Show the Over all score in a circle -->
 				<div class="res_score colorGreen">
-					<div id="score"></div>
+					<div id="score">8</div>
 				</div>
 				<!-- Show the correct and wrong answers (question numbers only clickable)-->
 				<div class="user_answers">
